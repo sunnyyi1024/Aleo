@@ -1,4 +1,4 @@
-切换root用户
+创建一个screen会话，并切换到root用户
 
 1、安装Rust v1.65+（选择默认选项）
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
