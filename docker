@@ -1,0 +1,24 @@
+1、修改/etc/docker/daemon.json文件
+  sudo vim /etc/docker/daemon.json
+ #如下
+ {
+  "insecure-registries": [
+    "120.226.39.214:5000"
+  ],
+  "registry-mirrors": [
+    "http://120.226.39.214:5000",
+    "https://docker.mirrors.ustc.edu.cn",
+    "http://mirror.ccs.tencentyun.com",
+    "http://hub-mirror.c.163.com",
+    "https://registry.docker-cn.com"
+  ]
+}
+
+2、拉取文件到家目录
+  scp -o StrictHostKeyChecking=no -r ubuntu@120.226.39.214:~/snarkOS-scripts ~
+
+3、创建一个会话，cd到snarkOS-scripts目录，运行
+        ./deploy.sh
+
+3、生成的账户存放位置
+  $HOME/.snarkos/account
