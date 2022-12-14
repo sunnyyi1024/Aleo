@@ -1,0 +1,24 @@
+切换root用户
+
+1、安装Rust v1.65+（选择默认选项）
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+2、克隆Github存储库
+git clone https://github.com/AleoHQ/snarkOS.git --depth 1
+
+3、进入 snarkOS 目录
+cd snarkOS
+
+4、ubuntu用户安装依赖项：
+./build_ubuntu.sh
+
+5、非ubuntu用户安装snarkOS （和第四步效果一样）
+cargo install --path .
+
+6、生成Aleo账户地址（地址记得保存好）
+snarkos account new
+
+7、运行Aleo Prover，启动一个证明节点
+./run-prover.sh
+
+8、出现提示时，输入第六步生成的Aleo私钥
